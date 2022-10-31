@@ -1,28 +1,49 @@
-# Project-1
-Detecting Cancer in Breast Cells (15 points)
-In this problem, you will build a set of different models to diagnose breast cancer. Images as the one
-shown below are used in practice to detect cancer in breast cells. Features are computed from a digitalized
-image of a fine needle aspirate (FNA) of a breast mass. The real-valued features computed for each cell
-nucleus are:
-• Radius (mean of distances from center to points on the perimeter)
-• Texture (standard deviation of gray-scale values)
-• Perimeter
-• Area
-• Smoothness (local variation in radius lengths)
-• Compactness (perimeter^2/area-1.0)
-Concavity (severity of concave portions of the contour)
-• Concave points (number of concave portions of the contour)
-• Symmetry
-• Fractal dimension
-The mean, standard error, and largest value of these features were computed for each image resulting in
-30 features. The training features can be found as cancer.train.csv, the corresponding labels can be found
-as label.train.csv. Similarly, test data can be found as cancer.test.csv and label.test.csv. In the features
-files, the first ten columns correspond to the mean values of the features, the next ten columns
+# Detecting Cancer in Breast Cells
+In this project, I will build a set of different models to diagnose breast cancer. Images as the one
+shown below are used in practice to detect cancer in breast cells.
+
+<p align="center">
+  <img width="350" alt="Screenshot 2022-10-31 at 12 08 34 PM" src="https://user-images.githubusercontent.com/114110108/199058014-d5554aee-f53d-4911-bec1-f5cbac654b70.png">
+</p>
+
+The real-valued features computed for each cell nucleus are:
+- Radius (mean of distances from center to points on the perimeter)
+- Texture (standard deviation of gray-scale values)
+- Perimeter
+- Area
+- Smoothness (local variation in radius lengths)
+- Compactness (perimeter^2/area-1.0)
+- Concavity (severity of concave portions of the contour)
+- Concave points (number of concave portions of the contour)
+- Symmetry
+- Fractal dimension
+
+In the features files, the first ten columns correspond to the mean values of the features, the next ten columns
 correspond to the standard error and the last ten columns correspond to the largest value.
-The response variable can take the values “B” (benign) or “M” (malign). We observe 𝑛𝑛 independent
-observations (𝑦𝑦𝑖𝑖, 𝑥𝑥1𝑖𝑖, ... , 𝑥𝑥𝑝𝑝𝑖𝑖) for 𝑖𝑖 = 1, ... , 𝑛𝑛, where 𝑦𝑦𝑖𝑖 ∈ {𝐵𝐵, 𝑀𝑀}.
-The models that you need to use to detect cancer are:
-• Logistic Regression
-• Linear Discriminant Analysis
-• Quadratic Discriminant Analysis
-• Naïve Bayes
+The models that I used to detect cancer are:
+- Logistic Regression
+- Linear Discriminant Analysis
+- Quadratic Discriminant Analysis
+- Naïve Bayes
+## Results
+#### LDA plot
+    
+<p align="center">
+  <img width="360" height="200" src="https://user-images.githubusercontent.com/114110108/199062367-11f2e602-a204-413a-92b2-cf0200f07fd0.png">
+</p>
+    
+#### NB plot
+<p align="center">
+  <img width="360" height="200" src="https://user-images.githubusercontent.com/114110108/199062541-15db23fd-cc19-44d9-b096-7b72e864fce8.png">
+</p> 
+    
+The table for the testing and training errors are as follows,
+<p align="center">
+  <img width="300" height="200" src="https://user-images.githubusercontent.com/114110108/199062699-666701fc-5413-4859-8a35-692b1a7026d2.png">
+</p> 
+  
+
+Training error are all smaller than test errors. A poor performance of Naive Bayes suggests that variables are
+not independent. Linear discriminant analysis works the best while Logistic regression also has relatively
+small training and test errors. Since the LDA and logistic regression performs better, the true decision
+boundaries is close to linear.
