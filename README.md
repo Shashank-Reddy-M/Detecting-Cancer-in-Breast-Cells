@@ -21,10 +21,10 @@ The real-valued features computed for each cell nucleus are:
 In the features files, the first ten columns correspond to the mean values of the features, the next ten columns
 correspond to the standard error and the last ten columns correspond to the largest value.
 The models that I used to detect cancer are:
-- Logistic Regression
-- Linear Discriminant Analysis
-- Quadratic Discriminant Analysis
-- Naïve Bayes
+- Logistic Regression (LR)
+- Linear Discriminant Analysis (LDA)
+- Quadratic Discriminant Analysis (QDA)
+- Naïve Bayes (NB)
 ## Results
 #### LDA plot
     
@@ -37,7 +37,7 @@ The models that I used to detect cancer are:
   <img width="360" height="200" src="https://user-images.githubusercontent.com/114110108/199062541-15db23fd-cc19-44d9-b096-7b72e864fce8.png">
 </p> 
     
-The table for the testing and training errors are as follows,
+The table for the testing and training errors for all the models are as follows,
 <p align="center">
   <img width="300" height="200" src="https://user-images.githubusercontent.com/114110108/199062699-666701fc-5413-4859-8a35-692b1a7026d2.png">
 </p> 
